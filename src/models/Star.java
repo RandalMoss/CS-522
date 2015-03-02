@@ -7,7 +7,7 @@ public class Star {
 	private String type;
 	private int age;
 	private int mass;
-	private int lumionsity;
+	private int luminosity;
 	private int temperature;
 	private String solarSystemName;
 	public int getId() {
@@ -46,11 +46,11 @@ public class Star {
 	public void setMass(int mass) {
 		this.mass = mass;
 	}
-	public int getLumionsity() {
-		return lumionsity;
+	public int getLuminosity() {
+		return luminosity;
 	}
-	public void setLumionsity(int lumionsity) {
-		this.lumionsity = lumionsity;
+	public void setLuminosity(int luminosity) {
+		this.luminosity = luminosity;
 	}
 	public int getTemperature() {
 		return temperature;

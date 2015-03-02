@@ -52,6 +52,11 @@ window.onload=function() {
                 <h2>Results</h2> 
                 
 				Name: ${object.name} <br/>
+				Type: ${object.type } <br/>
+				Age: ${object.age }<br/>
+				Mass: ${object.mass }<br/>
+				Luminosity: ${object.luminosity }<br/>
+				Temperature: ${object.temperature }<br/>
 				Orbits: <a id = "anchor" href="SearchResults?select=solar_systems&query=${object.solarSystemName}">${object.solarSystemName}</a> <br/>
 				<a href=" ${object.url }">More Information</a>
                 

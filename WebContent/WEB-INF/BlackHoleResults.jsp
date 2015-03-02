@@ -52,6 +52,11 @@ window.onload=function() {
                 <h2>Results</h2> 
                 
 				Name: ${object.name} <br/>
+				Type: ${object.type } <br/>
+				Angular_momentum: ${object.angularMomentum } <br />
+				Charge: ${object.charge } <br/>
+				Mass: ${object.mass } <br/>
+				Age: ${object.age } <br/>
 				<a href=" ${object.url }">More Information</a>
                 
                 

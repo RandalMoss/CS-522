@@ -52,6 +52,7 @@ window.onload=function() {
                 <h2>Results</h2> 
                 
 				Name: ${object.name} <br/>
+				Type: ${object.type } <br/>
 				Orbits: <a id = "anchor" href="SearchResults?select=stars&query=${object.starName}">${object.starName}</a> <br/>
 				<a href=" ${object.url }">More Information</a>
                 
