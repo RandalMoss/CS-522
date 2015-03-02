@@ -17,6 +17,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import database.Path;
+
 
 @WebServlet("/MainPage")
 public class MainPageServlet extends HttpServlet {
@@ -27,18 +29,19 @@ public class MainPageServlet extends HttpServlet {
     }
     
 	public void init(ServletConfig config) throws ServletException {
+		
 		try {
 			Class.forName("org.firebirdsql.jdbc.FBDriver");
-			 Connection connection = DriverManager.getConnection(
-					 "jdbc:firebirdsql:localhost/3050:C:/Users/toram_000/firebird/testdb/test.fdb",
-					 "sysdba", "masterkey");
+			Connection connection = DriverManager.getConnection(
+					 Path.getDatabaseURL(), "sysdba", "masterkey"
+			);
 			 
-			 ResultSet rs = connection.prepareStatement("select * from galaxies").executeQuery();
-			 ResultSetMetaData rd = rs.getMetaData();
-			 while(rs.next()){
-				 String name = rs.getString(2);
-				 System.out.println("Length of row is: " + rd.getColumnCount());
-			 }
+			ResultSet rs = connection.prepareStatement("select * from galaxies").executeQuery();
+			ResultSetMetaData rd = rs.getMetaData();
+			while(rs.next()){
+				String name = rs.getString(2);
+				System.out.println("Length of row is: " + rd.getColumnCount());
+			}
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
